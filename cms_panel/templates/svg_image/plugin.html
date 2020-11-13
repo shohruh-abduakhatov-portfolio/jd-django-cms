@@ -1,0 +1,12 @@
+{% load cms_tags %}
+{% spaceless %}
+    <img src="{{ instance.svg_image.url }}" 
+
+         alt="{% if instance.alt %}{{ instance.alt }}{% endif %}"
+            {% if instance.additional_class_names %} class="{{ instance.get_additional_class_names }}"{% endif %}
+            {% if instance.alignment %} style="text-align: {{ instance.alignment }};"{% endif %}
+            {% if instance.id_name %} id="{{ instance.id_name }}"{% endif %}
+            {% if instance.width %} width="{{ instance.width }}"{% endif %}
+            {% if instance.height %} height="{{ instance.height }}"{% endif %}
+         >
+{% endspaceless %}

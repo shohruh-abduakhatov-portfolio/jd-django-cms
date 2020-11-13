@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+    {% placeholder content or%}
+        <h1 align="center"
+            style="
+            border: 2px dashed lightgray;
+            margin: 20px;
+            padding: 20px;
+            color: lightgray" >X</h1>
+    {% endplaceholder %}
+{% endblock %}

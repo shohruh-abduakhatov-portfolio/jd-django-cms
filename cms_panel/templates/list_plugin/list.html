@@ -1,0 +1,16 @@
+{% load cms_tags %}
+
+<ul class="{{ instance.extra_classes }}"
+        {% if instance.id_name %} id="{{ instance.id_name }}"{% endif %}
+        {% if instance.html_attributes_str %} {{ instance.html_attributes_str }}{% endif %}>
+    {% for plugin in instance.child_plugin_instances %}
+        <li
+                {% if plugin.id_name %}id="{{ plugin.id_name }}"{% endif %}
+                {% if plugin.extra_classes %} class="{{ plugin.extra_classes }}"{% endif %}
+                {% if plugin.html_attributes_str %} {{ plugin.html_attributes_str }}{% endif %}
+        >
+
+            {% render_plugin plugin %}
+        </li>
+    {% endfor %}
+</ul>

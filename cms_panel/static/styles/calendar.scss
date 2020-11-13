@@ -1,0 +1,93 @@
+// Основной коркас
+.ui-datepicker {
+  padding: 1rem;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+// Убираем бордер
+.ui-widget.ui-widget-content {
+  //border: 1px solid #c5c5c5;
+  border: none;
+}
+
+// дни календаря
+.ui-state-default {
+  border: none !important;
+  background-color: #fff !important;
+}
+
+// header календаря
+.ui-datepicker-header {
+  background-color: #ffffff;
+  border: none;
+
+  // title
+  .ui-datepicker-title {
+    font-weight: normal;
+    margin: 0;
+    text-align: left !important;
+    text-transform: uppercase;
+
+    // что-бы была запятая после месяца (между месяцом и годом - запятая)
+    .ui-datepicker-month::after {
+      content: ',';
+    }
+  }
+}
+
+// Дни недели
+.ui-datepicker-calendar {
+  margin: 0 !important;
+
+  & > thead > tr > th > span {
+    text-transform: uppercase;
+    font-family: 'SegoeUIReg', sans-serif;
+    font-weight: lighter;
+  }
+}
+
+// удаляем значки перехода с месяца на месяц
+.ui-datepicker-prev, .ui-datepicker-next {
+  display: none;
+}
+
+.ui-state-default {
+  text-align: center !important;
+}
+
+// выходные
+.ui-datepicker-week-end {
+  &, span {
+    color: #ff3300 !important;
+  }
+
+  a {
+    color: #FF3300 !important;
+
+    &.ui-state-hover, &.ui-state-active {
+      color: #ffffff !important;
+    }
+  }
+}
+
+// сам дизайн дней при наведений
+.ui-state-hover, .ui-state-active {
+  color: #ffffff !important;
+  background-color: #D1AB66 !important;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+@media (min-width: 320px) and (max-width: 992px) {
+  .ui-datepicker {
+    width: 17rem !important;
+  }
+
+  .ui-datepicker-multi .ui-datepicker-group {
+    float: initial;
+    width: 100%;
+  }
+}

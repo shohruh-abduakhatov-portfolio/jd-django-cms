@@ -1,0 +1,545 @@
+html {
+    height: 100%;
+}
+
+body {
+    color: #333333;
+    background-image: url(../img/bg3.jpg);
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 15px;
+}
+
+body .navbar {
+    padding-top: 1.25rem;
+}
+
+body .navbar .navbar-brand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+body .navbar .navbar-brand .logo > img {
+    width: 2.9rem;
+    margin-right: .8rem;
+}
+
+body .navbar .navbar-brand .logo-text {
+    line-height: 1;
+    color: #ffffff;
+}
+
+body .navbar .navbar-brand .logo-text .corp {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+body .navbar .navbar-brand .logo-text .bold {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.4rem;
+}
+
+body .navbar .navbar-nav {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+body .navbar .nav-item {
+    color: #fff;
+    margin-right: 1rem;
+    opacity: unset;
+}
+
+body .navbar .nav-item:hover {
+    cursor: pointer;
+}
+
+body .navbar .nav-item:nth-child(1) {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+body .navbar .nav-item > a {
+    color: #ffffff;
+}
+
+body .navbar .nav-item.dropdown > .nav-link > img {
+    width: 8px;
+}
+
+body .navbar .nav-item > .dropdown-item:hover, body .navbar .nav-item .dropdown-item:focus {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #D1AB66 !important;
+}
+
+body .navbar .nav-item .dropdown-item.active, body .navbar .nav-item .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #D1AB66 !important;
+}
+
+body .navbar .nav-item > a.nav-link > button.btn {
+    display: inline-block;
+    color: #d1ab66;
+    background-color: #ffffff;
+    border-color: #D1AB66;
+    width: 7.5rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+body .navbar .top-bordered-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 1rem;
+    margin-top: .3rem;
+    border-top: 1px solid #D1AB66;
+}
+
+body .navbar .top-bordered-item:hover {
+    color: #fff;
+}
+
+body .navbar .bottom-bordered-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 1rem;
+    margin-bottom: .3rem;
+    border-bottom: 1px solid #D1AB66;
+}
+
+body .navbar .bottom-bordered-item:hover {
+    color: #fff;
+}
+
+body .ticket-search .background {
+    position: relative;
+    background: url(../img/bg.jpg) no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+body .ticket-search .background::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.15)));
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.15) 100%);
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.15) 100%);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.15) 100%);
+    z-index: 0;
+}
+
+body .ticket-search .background .center-text {
+    position: relative;
+    padding-top: 7.5rem;
+    text-align: center;
+}
+
+body .ticket-search .background .center-text .timetable {
+    font-size: 3.5rem;
+    padding-right: 1rem;
+}
+
+body .ticket-search .background .center-text .choose-date {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.25rem;
+}
+
+body .ticket-search .background .center-text .inputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 2.625rem;
+    padding-bottom: 4.6875rem;
+}
+
+body .ticket-search .background .center-text .inputs > div {
+    display: inline-block;
+    margin-right: 1px;
+}
+
+body .ticket-search .background .center-text .inputs .input-search {
+    position: relative;
+}
+
+body .ticket-search .background .center-text .inputs .input-search img {
+    top: 50%;
+    right: 3%;
+    margin-top: -1rem;
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+}
+
+body .ticket-search .background .center-text .inputs .autocomplete {
+    position: relative;
+}
+
+body .ticket-search .background .center-text .inputs .autocomplete .list-group {
+    max-height: 15.625rem;
+    overflow-y: auto;
+    margin-top: 1rem;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px;
+}
+
+body .ticket-search .background .center-text .inputs .autocomplete .list-group .list-group-item {
+    color: #333333;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+body .ticket-search .background .center-text .inputs .autocomplete .list-group .list-group-item:hover, body .ticket-search .background .center-text .inputs .autocomplete .list-group .list-group-item:focus {
+    color: #495057;
+    background-color: #f8f9fa;
+}
+
+body .ticket-search .background .center-text .inputs .autocomplete .list-group .list-group-item.active {
+    color: white;
+    border-color: #D1AB66;
+    background-color: #D1AB66;
+}
+
+body .ticket-search .background .center-text .inputs input {
+    border: none;
+    height: 3.5rem;
+    min-width: 18rem;
+    color: #333333;
+    background-color: #fff;
+    border-radius: 0;
+    padding: .75rem 1rem;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+body .ticket-search .background .center-text .inputs input::-webkit-input-placeholder {
+    color: #333333;
+}
+
+body .ticket-search .background .center-text .inputs input:-ms-input-placeholder {
+    color: #333333;
+}
+
+body .ticket-search .background .center-text .inputs input::-ms-input-placeholder {
+    color: #333333;
+}
+
+body .ticket-search .background .center-text .inputs input::placeholder {
+    color: #333333;
+}
+
+body .ticket-search .background .center-text .inputs .exchange {
+    border: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+body .ticket-search .background .center-text .inputs .exchange img {
+    top: 50%;
+    width: 23px;
+    height: 17px;
+}
+
+body .ticket-search .background .center-text .inputs .when {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+
+body .ticket-search .background .center-text .inputs .when .icon-calendar {
+    right: 0;
+    bottom: 50%;
+    -webkit-transform: translateX(-50%) translateY(50%);
+    -ms-transform: translateX(-50%) translateY(50%);
+    transform: translateX(-50%) translateY(50%);
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+body .ticket-search .background .center-text .inputs .when .datepicker {
+    margin-top: 3.5rem;
+    border: 1px solid #c5c5c5;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px;
+    position: absolute;
+    z-index: 1;
+}
+
+body .ticket-search .background .center-text .inputs .when .datepicker .btn-group {
+    padding: 1rem;
+    width: 100%;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+body .ticket-search .background .center-text .inputs .when .datepicker .btn-group .btn-act {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #D1AB66;
+}
+
+body .ticket-search .background .center-text .inputs .when .datepicker .btn-group .btn-act.active, body .ticket-search .background .center-text .inputs .when .datepicker .btn-group .btn-act:focus, body .ticket-search .background .center-text .inputs .when .datepicker .btn-group .btn-act:hover {
+    background-color: #D1AB66;
+    color: #fff;
+}
+
+body .ticket-search .background .center-text .find-btn {
+    height: 3.5rem;
+    width: 13.125rem;
+}
+
+body .ticket-search .background .center-text .find {
+    border: none;
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+    display: inline-block;
+    background-color: #D1AB66;
+    font-size: 1.25rem;
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+body .ticket-search .background .center-text .find:hover:enabled, body .ticket-search .background .center-text .find:focus:enabled {
+    background-color: #c5953f;
+}
+
+body .ticket-search .background .center-text .find:active:enabled {
+    background-color: #a17930;
+}
+
+body main {
+    background-color: #fff;
+}
+
+
+body main .header {
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 2.5rem;
+    margin-top: 3.75rem;
+    margin-bottom: 2.5rem;
+}
+
+
+body main .popular-places .popular-station {
+    position: relative;
+    text-align: center;
+}
+
+body main .popular-places .popular-station .centered {
+
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2.25rem;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+body main .how-to-buy .rectangle {
+    background-color: #E4E4E4;
+    width: 100%;
+    height: 182px;
+}
+
+body main .info-for-passengers > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+body main .info-for-passengers .ellipse {
+    background-color: #E4E4E4;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-bottom: 1.25rem;
+}
+
+body main .info-for-passengers a {
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 0.9375rem;
+    color: #1080C2;
+}
+
+.footer-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.16), 0 -2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.16), 0 -2px 10px 0 rgba(0, 0, 0, 0.12);
+    position: static;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    z-index: 3;
+}
+
+.footer-main .left {
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left;
+}
+
+.footer-main .left .item {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.footer-main .left .item a {
+    font-size: 1rem;
+    color: #336699;
+}
+
+.footer-main .right {
+    display: block;
+    float: right;
+    position: relative;
+}
+
+.footer-main .right .item-right {
+    display: inline-block;
+    color: #707070;
+}
+
+a, a:focus, a:hover, a:visited {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+.c-point {
+    cursor: pointer;
+}
+
+.border {
+    border: 1px solid red !important;
+}
+
+.content-body {
+    padding: 1.5rem;
+    background-color: #ffffff;
+}
+
+.content-body > section:not(.no-p) {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.bold {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.accent-color {
+    color: #D1AB66;
+}
+
+accordion-group .card {
+    border: none !important;
+}
+
+accordion-group .card .card-header:first-child {
+    padding: 0 !important;
+    background-color: #fff;
+    border-bottom: none !important;
+}

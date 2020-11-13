@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!doctype html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport"
+                  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Train search</title>
+            <link rel="stylesheet" href="styles/bootstrap-4.3.1-dist/css/bootstrap.css">
+            <link rel="stylesheet" href="styles/styles.css">
+            <link rel="stylesheet" href="styles/bootstrap-4.3.1-dist/css/calendar.css">
+            <link rel="stylesheet" href="styles/calendar.css">
+        </head>
+<body>
+
+<!--main-->
+<div class="ticket-search">
+
+    <!-- background -->
+    <header class="background">
+
+        <!--header-->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- logo -->
+                <a class="navbar-brand">
+                    <div class="logo">
+                        <img src="img/svg/icon-uti.svg" alt="">
+                    </div>
+                    <div class="logo-text">
+                        <div class="corp" i18n>АКЦИОНЕРНОЕ ОБЩЕСТВО</div>
+                        <div class="bold" i18n>УЗБЕКИСТОН ТЕМИР ЙУЛЛАРИ</div>
+                    </div>
+                </a>
+                <!-- /.logo -->
+
+                <!-- responsive button -->
+                <button class="navbar-toggler" type="button" aria-controls="collapseBasic">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- /.responsive button -->
+
+                <!-- right-side -->
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav mr-auto"></ul>
+
+                    <!-- links -->
+                    <ul class="navbar-nav">
+
+                        <!-- schedule-link -->
+                        <li class="nav-item active">
+                            <!--<a class="nav-link" i18n>Продажа билетов</a>-->
+                            <a class="nav-link" i18n>Расписание поездов</a>
+                        </li>
+                        <!-- /.schedule-link -->
+
+                        <!-- language -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false"
+                            >Русский <img src="img/svg/arrow-down.svg" alt=""></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="dropdown-item">Русский</li>
+                                <li class="dropdown-item">English</li>
+                                <li class="dropdown-item">O'zbek</li>
+                            </ul>
+                        </li>
+                        <!-- /.language-->
+
+                        <!-- login-button -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <button class="btn" i18n>Войти</button>
+                            </a>
+                        </li>
+                        <!-- /.login-button -->
+
+                        <!-- username -->
+                        <!--<li class="nav-item dropdown username" dropdown *ngIf="isLogged">-->
+                        <!--<a class="nav-link" id="usernameDropdown" role="button" data-toggle="dropdown"-->
+                        <!--aria-haspopup="true" aria-expanded="false" dropdownToggle>-->
+                        <!--{{userName}}-->
+                        <!--<img src="img/svg/arrow-down.svg" alt=""></a>-->
+                        <!--<ul class="dropdown-menu" aria-labelledby="usernameDropdown" *dropdownMenu>-->
+                        <!--<li class="dropdown-item bottom-bordered-item" i18n>мои новые-->
+                        <!--заказы-->
+                        <!--</li>-->
+                        <!--<li class="dropdown-item" i18n>архив заказов</li>-->
+                        <!--<li class="dropdown-item" i18n>мои постоянные попутчики</li>-->
+                        <!--<li class="dropdown-item" i18n>личные данные</li>-->
+                        <!--<li class="dropdown-item" i18n>сменить пароль</li>-->
+                        <!--<li class="dropdown-item top-bordered-item" i18n>выход</li>-->
+                        <!--</ul>-->
+                        <!--</li>-->
+                        <!-- /.username-->
+
+
+                    </ul>
+                    <!-- /.links -->
+
+                </div>
+                <!-- /.right-side -->
+
+
+            </div>
+        </nav>
+
+        <!-- container -->
+        <div class="container">
+            <section class="center-text">
+                <div class="timetable" i18n>Купить билет</div>
+                <div class="choose-date" i18n>Выберите маршрут и дату, чтобы узнать расписание и купить ж/д билет</div>
+                <div class="inputs">
+                    <div class="autocomplete">
+                        <div class="input-search">
+                            <input tabindex="1"
+                                   placeholder="Откуда"
+                                   autocomplete="off" type="text" id="input-from"
+                            >
+                            <!--<img [hidden]="!data[0].loader" src="img/svg/loader.svg"-->
+                            <!--alt="searching-process-gif">-->
+                        </div>
+                        <!--<ul class="list-group" *ngIf="data[0].station.name.length && data[0].result.length">-->
+                        <!--<li class="list-group-item" [value]="station.code" *ngFor="let station of data[0].result"-->
+                        <!--(click)="station_click(0, station)">{{ station.name }}-->
+                        <!--</li>-->
+                        <!--</ul>-->
+                    </div>
+                    <div>
+                        <!-- exchange -->
+                        <button class="exchange">
+                            <span class="sr-only">exchange-button</span>
+                            <img src="img/svg/icon-change.svg" alt="">
+                        </button>
+                        <!-- /.exchange -->
+                    </div>
+
+                    <div class="autocomplete">
+                        <div class="input-search">
+                            <input tabindex="2"
+                                   placeholder="Куда"
+                                   autocomplete="off" type="text" id="input-to"
+                            >
+                            <!--<img [hidden]="!data[1].loader" src="img/svg/loader.svg"-->
+                            <!--alt="searching-process-gif">-->
+                        </div>
+                        <!--<ul class="list-group" *ngIf="data[1].station.name.length && data[1].result.length">-->
+                        <!--<li class="list-group-item" [value]="station.code" *ngFor="let station of data[1].result"-->
+                        <!--(click)="station_click(1, station)">{{ station.name }}-->
+                        <!--</li>-->
+                        <!--</ul>-->
+                    </div>
+
+                    <div class="when">
+                        <!--no-->
+                        <input tabindex="3" readonly
+                               id="datepicker-inp"
+                               type="text" placeholder="Когда" autocomplete="off">
+                        <label for="datepicker-inp">
+                            <img class="icon-calendar" src="../../../assets/img/svg/icon-calendar.svg" alt="">
+                        </label>
+                        <div class="datepicker">
+                            <div class="btn-group" role="group">
+                                <button id="forwardBtn" class="btn btn-act">Только туда</button>
+                                <button id="backwardBtn" class="btn btn-act">Туда и обратно</button>
+                            </div>
+                            <div id="datepicker-multi"></div>
+                        </div>
+                    </div>
+                    <!-- /.when -->
+
+
+                    <div class="find-btn">
+                        <button
+                                class="btn find"
+                                i18n onclick="goToDirection()"
+                        >Найти
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+            <!--timetable-section-->
+        </div>
+        <!-- /.container -->
+
+    </header>
+    <!-- /.background -->
+
+    <!-- container -->
+    <main class="container py-5">
+
+        <!--popular-places-->
+        <section class="popular-places row">
+
+            <div class="col-lg-12 header" i18n>Популярные вокзалы Узбекистана</div>
+
+            <!-- col-lg-3 -->
+            <div class="col-lg-3">
+                <div class="popular-station" style="background-image: url('img/01.jpg')">
+                    <!--"'url(img/01.jpg)'">-->
+
+                    Самарканд
+                </div>
+            </div>
+
+            <!-- col-lg-3 -->
+            <div class="col-lg-3">
+                <div class="popular-station" style="background-image: url('img/02.jpg')">
+                    Бухара
+                </div>
+            </div>
+
+            <!-- col-lg-3 -->
+            <div class="col-lg-3">
+                <div class="popular-station" style="background-image: url('img/03.jpg')">
+                    Хива
+                </div>
+            </div>
+
+            <!-- col-lg-3 -->
+            <div class="col-lg-3">
+                <div class="popular-station" style="background-image: url('img/04.jpg')">
+                    Шахрисабз
+                </div>
+            </div>
+
+        </section>
+
+        <section class="how-to-buy row">
+
+            <div class="col-lg-12 header" i18n>Как купить онлайн билет?</div>
+
+            <!-- col-lg-3 -->
+            <div class="col-lg-3">
+                <div class="rectangle"></div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="rectangle"></div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="rectangle"></div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="rectangle"></div>
+            </div>
+
+        </section>
+
+        <section class="info-for-passengers row">
+            <div class="col-lg-12 header" i18n>Информация пассажирам</div>
+
+            <!-- ellipse -->
+            <div class="col-lg-2 sect">
+                <div class="ellipse"></div>
+                <a href="#" i18n>Правила покупки электронных билетов</a>
+            </div>
+
+            <!-- ellipse -->
+            <div class="col-lg-2 sect">
+                <div class="ellipse"></div>
+                <a href="#" i18n>Правила пассажирских перевозок</a>
+            </div>
+
+            <!-- ellipse -->
+            <div class="col-lg-2 sect">
+                <div class="ellipse"></div>
+                <a href="#" i18n>Пассажирам с ограниченными физическими возможностями</a>
+            </div>
+
+            <!-- ellipse -->
+            <div class="col-lg-2 sect">
+                <div class="ellipse"></div>
+                <a href="#" i18n>Информация по страхованию</a>
+            </div>
+
+            <!-- ellipse -->
+            <div class="col-lg-2 sect">
+                <div class="ellipse"></div>
+                <a href="#" i18n>Льготы и бонусы</a>
+            </div>
+
+            <!-- ellipse -->
+            <div class="col-lg-2 sect">
+                <div class="ellipse"></div>
+                <a href="#" i18n>Часто задаваемые вопросы</a>
+            </div>
+
+        </section>
+
+    </main>
+    <!-- /.container -->
+
+
+</div>
+<!-- /.ticket-search -->
+
+<footer class="footer-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <ul class="left">
+                    <li class="item"><a href="" i18n>О компании</a></li>
+                    <!-- /.item -->
+                    <li class="item"><a href="" i18n>Обратная связь</a></li>
+                    <!-- /.item -->
+                    <li class="item"><a href="" i18n>Пресс-релизы</a></li>
+                    <!-- /.item -->
+                    <li class="item"><a href="" i18n>Правила использования</a></li>
+                    <!-- /.item -->
+                </ul>
+                <!-- /.left -->
+            </div>
+            <!-- /.right -->
+            <!-- /.col-lg-7 -->
+            <div class="col-lg-5">
+                <div class="right">
+                    <div class="item-right">
+                        © 2015-2018 АО O'zbekiston Temir Yo'llari
+                    </div>
+                    <!-- /.item-right -->
+                </div>
+                <!-- /.col-lg-5 -->
+            </div>
+            <!--col-lg-5-->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</footer>
+
+
+<script src="styles/bootstrap-4.3.1-dist/js/jquery.js"></script>
+<script src="styles/bootstrap-4.3.1-dist/js/popper.js"></script>
+<script src="styles/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+<script src="styles/bootstrap-4.3.1-dist/js/calendar.js"></script>
+<script>
+    const datepickerInp = $('#datepicker-inp');
+    const datepicker = $('.datepicker');
+    const btnForward = $('#forwardBtn');
+    const btnBackward = $('#backwardBtn');
+
+    let sdVal1 = 'КОГДА: ТУДА';
+    let sdVal2 = 'ОБРАТНО';
+
+    $(function () {
+        // preparing the datepicker data
+        const date = new Date();
+        const today = (date.getMonth() + 1);
+        const newDate = new Date(date.setDate(date.getDate() + 40));
+        let after = (newDate.getMonth() + 1);
+        if ((after < today)) {
+            after += 12;
+        }
+        const numberOfMonths = (after - today) + 1;
+
+        datepickerInp.val(sdVal1);
+
+        datepicker.hide();
+
+        let onlyForward = true;
+
+        $(document).on('click', function () {
+            datepicker.hide();
+        });
+        datepickerInp.on('click', eventInput);
+        // datepickerInp.on('focus', eventInput);
+
+        btnForward.addClass('active');
+        btnBackward.removeClass('active');
+
+        btnForward.on('click', function () {
+            event.stopPropagation();
+            onlyForward = true;
+            btnForward.addClass('active');
+            btnBackward.removeClass('active');
+        });
+
+        btnBackward.on('click', function () {
+            event.stopPropagation();
+            onlyForward = false;
+            btnForward.removeClass('active');
+            btnBackward.addClass('active');
+        });
+
+        // datepicker's options
+        const dp = $('#datepicker-multi');
+        dp.datepicker({
+            numberOfMonths: numberOfMonths,
+            showButtonPanel: false,
+            showOtherMonths: true,
+            minDate: 0,
+            maxDate: '+40D',
+            onSelect: function (sd_value) {
+                datepickerInp.val(sd_value);
+                datepicker.hide();
+                if (onlyForward === true) {
+                    sessionStorage.setItem('sd-value', sd_value);
+                    sdVal1 = sd_value;
+                    datepickerInp.val(sdVal1 + ' - ' + sdVal2);
+                } else {
+                    sessionStorage.setItem('sd-value2', sd_value);
+                    sdVal2 = sd_value;
+                    datepickerInp.val(sdVal1 + ' - ' + sdVal2);
+                }
+            },
+        });
+
+    });
+
+    function eventInput() {
+        event.stopPropagation();
+        if (datepicker.is(':hidden')) {
+            datepicker.show();
+        } else {
+            datepicker.hide();
+        }
+    }
+</script>
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>

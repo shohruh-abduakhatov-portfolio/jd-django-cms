@@ -1,0 +1,15 @@
+{% load cms_tags %}
+{% spaceless %}
+    {% if instance.url_link %}
+        <a href="{{ instance.url_link }}" i18n>{{ instance.link_title }}</a>
+    {% elif not instance.url_link and instance.link_title %}
+        <a i18n>{{ instance.link_title }}</a>
+    {% elif instance.text_body %}
+        {{ instance.text_body }}
+    {% elif instance.url_link %}
+    {% endif %}
+
+    {% for plugin in instance.child_plugin_instances %}
+        {% render_plugin plugin %}
+    {% endfor %}
+{% endspaceless %}

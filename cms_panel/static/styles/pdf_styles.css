@@ -1,0 +1,448 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif; }
+
+body {
+  padding: 0;
+  margin: 0; }
+  body ul li {
+    list-style: none; }
+
+.bold {
+  font-weight: bold; }
+
+.italic {
+  font-style: italic; }
+
+.mt-1 {
+  margin-top: 4px; }
+
+.m-1 {
+  margin: 6px 0; }
+
+.mt-2 {
+  margin-top: 8px; }
+
+.simple {
+  font-size: 12px; }
+
+.norm {
+  font-size: 14px; }
+
+.big {
+  font-size: 16px; }
+
+.low {
+  font-size: 10px; }
+
+.mb-1 {
+  margin-bottom: 2px; }
+
+.line-height-1 {
+  line-height: 15px; }
+
+.text-left {
+  text-align: left; }
+
+.back-grey {
+  background-color: #e4e4e4; }
+
+.wrapper {
+  width: 940px;
+  height: 1080px;
+  position: relative; }
+  .wrapper .aside {
+    display: inline-block;
+    width: 100px;
+    height: 124vh;
+    background-color: #e4e4e4;
+    position: relative;
+    padding: 5px; }
+    .wrapper .aside .text {
+      display: inline-block;
+      position: absolute;
+      text-align: right;
+      font-size: 10px;
+      /* Border is the new background */
+      background: none;
+      /* Rotate from top left corner (not default) */
+      -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg); }
+      .wrapper .aside .text p {
+        padding: 0;
+        margin: 0;
+        width: 300px; }
+    .wrapper .aside .code {
+      width: 60px;
+      height: 200px;
+      background-color: #fff;
+      position: relative; }
+    .wrapper .aside .text-1 {
+      display: inline-block;
+      top: 0;
+      left: 65%; }
+    .wrapper .aside .text-2 {
+      display: inline-block;
+      top: 52%;
+      left: 65%; }
+    .wrapper .aside .code-1 {
+      display: inline-block;
+      left: 17%;
+      top: 26%; }
+    .wrapper .aside .code-2 {
+      display: inline-block;
+      left: 17%;
+      top: 61%; }
+  .wrapper .main {
+    display: inline-block;
+    width: 85%;
+    margin-left: 130px; }
+    .wrapper .main .logo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      padding: 5px; }
+      .wrapper .main .logo .img {
+        display: inline-block;
+        width: 30px;
+        height: 40px; }
+        .wrapper .main .logo .img img {
+          width: 100%;
+          height: 100%; }
+      .wrapper .main .logo .text-logo {
+        top: 10px;
+        font-size: 12px;
+        line-height: 3px;
+        padding-left: 5px; }
+    .wrapper .main .logo-2 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      position: absolute;
+      top: 57%;
+      padding: 5px; }
+      .wrapper .main .logo-2 .img {
+        display: inline-block;
+        width: 30px;
+        height: 40px; }
+        .wrapper .main .logo-2 .img img {
+          width: 100%;
+          height: 100%; }
+      .wrapper .main .logo-2 .text-logo {
+        top: 10px;
+        font-size: 12px;
+        line-height: 3px;
+        padding-left: 5px; }
+    .wrapper .main .header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      position: absolute;
+      width: 65%;
+      top: 0;
+      right: 0; }
+      .wrapper .main .header .left {
+        display: inline-block;
+        width: 65%;
+        text-align: right; }
+        .wrapper .main .header .left ul {
+          padding: 0;
+          display: inline-block; }
+          .wrapper .main .header .left ul li {
+            width: 100%; }
+      .wrapper .main .header .right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 40%;
+        text-align: left; }
+        .wrapper .main .header .right ul {
+          padding: 0 0 0 10px;
+          margin-top: 14px; }
+          .wrapper .main .header .right ul li {
+            width: 100%; }
+        .wrapper .main .header .right .real {
+          text-align: center;
+          padding: 4px;
+          background-color: #e4e4e4; }
+    .wrapper .main .header-2 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      position: absolute;
+      width: 65%;
+      top: 57%;
+      right: 0; }
+      .wrapper .main .header-2 .left {
+        display: inline-block;
+        width: 65%;
+        text-align: right; }
+        .wrapper .main .header-2 .left ul {
+          padding: 0;
+          display: inline-block; }
+          .wrapper .main .header-2 .left ul li {
+            width: 100%; }
+      .wrapper .main .header-2 .right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 40%;
+        text-align: left; }
+        .wrapper .main .header-2 .right ul {
+          padding: 0 0 0 10px;
+          margin-top: 14px; }
+          .wrapper .main .header-2 .right ul li {
+            width: 100%; }
+        .wrapper .main .header-2 .right .real {
+          text-align: center;
+          padding: 4px;
+          background-color: #e4e4e4; }
+    .wrapper .main .bottom-header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      position: absolute;
+      width: 80%;
+      top: 5%;
+      right: 0; }
+      .wrapper .main .bottom-header .left {
+        display: inline-block;
+        width: 89%;
+        text-align: right; }
+        .wrapper .main .bottom-header .left ul {
+          padding: 0;
+          display: inline-block; }
+          .wrapper .main .bottom-header .left ul li {
+            width: 100%; }
+      .wrapper .main .bottom-header .right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 40%;
+        text-align: left; }
+        .wrapper .main .bottom-header .right ul {
+          padding: 0 0 0 10px;
+          margin-top: 14px; }
+          .wrapper .main .bottom-header .right ul li {
+            width: 100%; }
+        .wrapper .main .bottom-header .right .real {
+          text-align: center;
+          padding: 4px 6px;
+          background-color: #e4e4e4; }
+    .wrapper .main .bottom-header-2 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      position: absolute;
+      width: 80%;
+      top: 62%;
+      right: 0; }
+      .wrapper .main .bottom-header-2 .left {
+        display: inline-block;
+        width: 89%;
+        text-align: right; }
+        .wrapper .main .bottom-header-2 .left ul {
+          padding: 0;
+          display: inline-block; }
+          .wrapper .main .bottom-header-2 .left ul li {
+            width: 100%; }
+      .wrapper .main .bottom-header-2 .right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 40%;
+        text-align: left; }
+        .wrapper .main .bottom-header-2 .right ul {
+          padding: 0 0 0 10px;
+          margin-top: 14px; }
+          .wrapper .main .bottom-header-2 .right ul li {
+            width: 100%; }
+        .wrapper .main .bottom-header-2 .right .real {
+          text-align: center;
+          padding: 4px 6px;
+          background-color: #e4e4e4; }
+    .wrapper .main .table-2 {
+      top: 20%; }
+    .wrapper .main .table-22 {
+      top: 77%; }
+    .wrapper .main .table-1 {
+      top: 10%; }
+    .wrapper .main .table-12 {
+      top: 67%; }
+    .wrapper .main .table-3 {
+      top: 29%;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #000;
+      margin-bottom: 8px; }
+      .wrapper .main .table-3 tr td {
+        padding: 2px; }
+    .wrapper .main .table-32 {
+      top: 86%;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #000;
+      margin-bottom: 8px; }
+      .wrapper .main .table-32 tr td {
+        padding: 2px; }
+    .wrapper .main .passenger-num {
+      position: absolute;
+      top: 27%;
+      display: inline-block;
+      font-size: 12px;
+      padding: 4px; }
+      .wrapper .main .passenger-num span {
+        padding: 0 8px; }
+    .wrapper .main .passenger-num-2 {
+      position: absolute;
+      top: 84%;
+      display: inline-block;
+      font-size: 12px;
+      padding: 4px; }
+      .wrapper .main .passenger-num-2 span {
+        padding: 0 8px; }
+    .wrapper .main table {
+      font-size: 12px;
+      text-align: center;
+      position: absolute;
+      width: 85%;
+      border-spacing: 0; }
+      .wrapper .main table tr th {
+        font-size: 10px;
+        vertical-align: middle;
+        padding: 8px; }
+      .wrapper .main table tr td {
+        font-size: 15px;
+        padding: 8px 0; }
+        .wrapper .main table tr td span {
+          display: inline-block;
+          font-size: 13px; }
+    .wrapper .main .options {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      width: 85%;
+      position: absolute;
+      top: 36%;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed #000; }
+      .wrapper .main .options .left {
+        width: 55%;
+        font-size: 12px;
+        margin-top: 8px; }
+        .wrapper .main .options .left p {
+          padding: 0;
+          margin: 0; }
+        .wrapper .main .options .left .carrier {
+          margin: 8px 0; }
+      .wrapper .main .options .right {
+        width: 45%;
+        font-size: 12px;
+        margin-top: 8px;
+        position: relative; }
+        .wrapper .main .options .right .service {
+          position: relative;
+          overflow: auto;
+          clear: both; }
+          .wrapper .main .options .right .service span {
+            display: inline-block;
+            float: right; }
+        .wrapper .main .options .right .simple {
+          font-size: 11px;
+          padding-bottom: 8px;
+          border-bottom: 1px solid #000; }
+          .wrapper .main .options .right .simple p {
+            padding: 0;
+            margin: 0; }
+            .wrapper .main .options .right .simple p span {
+              display: inline-block;
+              float: right; }
+        .wrapper .main .options .right .sub-option {
+          text-align: right;
+          padding: 8px 0;
+          font-size: 10px; }
+          .wrapper .main .options .right .sub-option .sum-txt {
+            font-size: 12px; }
+          .wrapper .main .options .right .sub-option .sum {
+            font-size: 16px;
+            padding: 2px 0;
+            margin-bottom: 4px; }
+          .wrapper .main .options .right .sub-option p {
+            margin: 0; }
+    .wrapper .main .options-2 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      width: 85%;
+      position: absolute;
+      top: 93%;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed #000; }
+      .wrapper .main .options-2 .left {
+        width: 55%;
+        font-size: 12px;
+        margin-top: 8px; }
+        .wrapper .main .options-2 .left p {
+          padding: 0;
+          margin: 0; }
+        .wrapper .main .options-2 .left .carrier {
+          margin: 8px 0; }
+      .wrapper .main .options-2 .right {
+        width: 45%;
+        font-size: 12px;
+        margin-top: 8px;
+        position: relative; }
+        .wrapper .main .options-2 .right .service {
+          position: relative;
+          overflow: auto;
+          clear: both; }
+          .wrapper .main .options-2 .right .service span {
+            display: inline-block;
+            float: right; }
+        .wrapper .main .options-2 .right .simple {
+          font-size: 11px;
+          padding-bottom: 8px;
+          border-bottom: 1px solid #000; }
+          .wrapper .main .options-2 .right .simple p {
+            padding: 0;
+            margin: 0; }
+            .wrapper .main .options-2 .right .simple p span {
+              display: inline-block;
+              float: right; }
+        .wrapper .main .options-2 .right .sub-option {
+          text-align: right;
+          padding: 8px 0;
+          font-size: 10px; }
+          .wrapper .main .options-2 .right .sub-option .sum-txt {
+            font-size: 12px; }
+          .wrapper .main .options-2 .right .sub-option .sum {
+            font-size: 16px;
+            padding: 2px 0;
+            margin-bottom: 4px; }
+          .wrapper .main .options-2 .right .sub-option p {
+            margin: 0; }

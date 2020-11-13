@@ -1,0 +1,107 @@
+{% load cms_tags menu_tags sekizai_tags staticfiles %}
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% page_attribute 'page_title' %} - Train search</title>
+
+    {#    OLD #}
+    {#    <link href="{% static "styles/bootstrap-4.3.1-dist/css/bootstrap.css" %}" rel="stylesheet">#}
+    {#    <link href="{% static "styles/styles.css" %}" rel="stylesheet">#}
+    {#    <link href="{% static "styles/calendar/calendar.min.css" %}" rel="stylesheet">#}
+    {#    <link href="{% static "styles/calendar/calendar-modify.css" %}" rel="stylesheet">#}
+
+    {#    new design#}
+    <link rel="stylesheet" href="{% static "styles/libs/bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "styles/fonts/stylesheet.min.css" %}">
+    <link rel="stylesheet" href="{% static "styles/libs/calendar/jquery-ui.min.css" %}">
+    <link rel="stylesheet" href="{% static "styles/css/calendar.min.css" %}">
+    <link rel="stylesheet" href="{% static "styles/css/style.min.css" %}">
+    {% render_block "css" %}
+</head>
+<body>
+{% cms_toolbar %}
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                {% static_placeholder "logo" %}
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                {% static_placeholder "top_bar" %}
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center position-relative">
+        {% placeholder "banner" %}
+    </div>
+</header>
+
+<section>
+    <div class="container text-center">
+        {% block content %} {% endblock %}
+    </div>
+</section>
+
+<footer class="py-3 border-top">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+            {% static_placeholder "footer" %}
+
+            <!-- button -->
+            <button class="d-lg-none mb-2" data-toggle="collapse" data-target="#footerCollapse" role="button"
+                   aria-expanded="false" aria-controls="footerCollapse">
+                <img src="{% static 'styles/img/svg/x.svg' %}" alt="">
+            </button>
+            <!-- /.button -->
+
+            <div class="text-muted">
+                © 2015-2018 АО O'zbekiston Temir Yo'llari
+            </div>
+        </div>
+    </div>
+</footer>
+
+{#<script src="{% static "styles/bootstrap-4.3.1-dist/js/jquery.js" %}"></script>#}
+{#<script src="{% static "styles/bootstrap-4.3.1-dist/js/popper.js" %}"></script>#}
+{#<script src="{% static "styles/bootstrap-4.3.1-dist/js/bootstrap.min.js" %}"></script>#}
+{#<script src="{% static "styles/calendar/calendar.min.js" %}"></script>#}
+{#<script src="{% static "styles/calendar/datepicker.min.js" %}"></script>#}
+{#<script src="{% static "styles/calendar/custom_datepicker.js" %}"></script>#}
+{#<script src="{% static "styles/js/station_search.js" %}"></script>#}
+{#<script src="{% static "styles/js/station_search.js" %}"></script>#}
+{#<script src="{% static "styles/js/login.js" %}"></script>#}
+{#<script src="{% static "styles/js/utils.js" %}"></script>#}
+
+
+<script src="{% static "styles/libs/jquery.min.js" %}"></script>
+<script src="{% static "styles/libs/popper.min.js" %}"></script>
+<script src="{% static "styles/libs/bootstrap/js/bootstrap.min.js" %}"></script>
+<script src="{% static "styles/libs/calendar/jquery-ui.min.js" %}"></script>
+<script src="{% static "styles/libs/calendar/extends/extends.min.js" %}"></script>
+<script src="{% static "styles/libs/calendar/i18n/locals.min.js" %}"></script>
+<script src="{% static "styles/js/scripts.min.js" %}"></script>
+<script src="{% static "styles/js/login.js" %}"></script>
+<script src="{% static "styles/js/utils.js" %}"></script>
+
+<script>
+    $(function () {
+        window.getCookie = function (name) {
+            var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+            if (match) return match[2];
+        }
+    });
+</script>
+
+{% render_block "js" %}
+</body>
+</html>
